@@ -1,205 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Jatziry</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            text-align: center;
-            background-color: #ffdde1;
-            font-family: 'Quicksand', sans-serif;
-            position: relative;
-            overflow-x: hidden;
-            overflow-y: auto;
-            margin: 0;
-            width: 100%;
-        }
-        h1 {
-            color: #d63384;
-            font-family: 'Dancing Script', cursive;
-            font-size: 48px;
-        }
-        .message {
-            font-size: 22px;
-            color: #ff1493;
-            margin: 20px;
-            font-weight: 600;
-            font-family: 'Dancing Script', cursive;
-        }
-        .carousel {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            overflow-x: auto;
-            max-width: 100%;
-            flex-wrap: nowrap;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
-        .carousel img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            cursor: pointer;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-            scroll-snap-align: start;
-        }
-        .bottom-images, .middle-images {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .bottom-images img, .middle-images img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .large-images {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        .large-images img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .full-image-container {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .full-image-container img {
-            max-width: 90%;
-            max-height: 90%;
-        }
-        .hearts {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-        .heart {
-            position: absolute;
-            bottom: -10px;
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            clip-path: path("M10 30 Q -10 0 10 10 Q 30 0 10 30 Z");
-            animation: floatUp 4s infinite linear;
-        }
-        @keyframes floatUp {
-            0% { transform: translateY(0) scale(1); opacity: 1; }
-            100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
-        }
-        /* Decoración a los lados */
-        .decorative {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 10px;
-            background-color: #ff1493;
-            z-index: -1;
-        }
-        .left-decorative {
-            left: 0;
-        }
-        .right-decorative {
-            right: 0;
-        }
-    </style>
+    <title>Sistema de ventas</title>
 </head>
 <body>
-    <h1>Would You Be My Valentine, Jatz?</h1>
-    <p class="message">Quiero compartir mi vida contigo porque cada que estas conmigo me vuelves feliz</p>
     
-    <div class="carousel">
-        <img src="imagenes/foto1.jpg" alt="Imagen 1" onclick="showFullImage(this.src)">
-        <img src="imagenes/foto2.jpg" alt="Imagen 2" onclick="showFullImage(this.src)">
-        <img src="imagenes/foto3.jpg" alt="Imagen 3" onclick="showFullImage(this.src)">
-        <img src="imagenes/foto4.jpg" alt="Imagen 4" onclick="showFullImage(this.src)">
-        <img src="imagenes/foto5.jpg" alt="Imagen 5" onclick="showFullImage(this.src)">
-    </div>
-    
-    <div class="middle-images">
-        <img src="imagenes/foto8.jpg" alt="Imagen 8" onclick="showFullImage(this.src)">
-        <img src="imagenes/foto9.jpg" alt="Imagen 9" onclick="showFullImage(this.src)">
-        <img src="imagenes/foto10.jpg" alt="Imagen 10" onclick="showFullImage(this.src)">
-        <img src="imagenes/foto11.jpg" alt="Imagen 11" onclick="showFullImage(this.src)">
-        <img src="imagenes/foto12.jpg" alt="Imagen 12" onclick="showFullImage(this.src)">
+    <div>ENCABEZADO</div>
+    <div><ul>
+        <li>Camisas</li>
+        <li>Pantalones</li>
+        <li>Playeras</li>
+        <li>Cintos</li>
+    </ul></div>
+    <div>
+        <h1>Sistema de ventas de Ropa</h1>
     </div>
 
-    <div class="large-images">
-        <img src="imagenes/foto6.jpg" alt="Imagen 6" onclick="showFullImage(this.src)">
-        <img src="imagenes/foto7.jpg" alt="Imagen 7" onclick="showFullImage(this.src)">
+    <div>
+        Pie de pagina
+        <hr>
     </div>
-    
-    <div class="full-image-container" id="fullImageContainer" onclick="closeFullImage()">
-        <img id="fullImage" src="">
-    </div>
-    
-    <div class="hearts"></div>
-
-    <div style="margin-top: 40px;">
-        <audio controls autoplay loop>
-            <source src="audio/Piel Canela.mp3" type="audio/mpeg">
-            Tu navegador no soporta el audio.
-        </audio>
-    </div>
-
-    <!-- Decoraciones laterales -->
-    <div class="decorative left-decorative"></div>
-    <div class="decorative right-decorative"></div>
-  
-    <script>
-        let index = 0;
-        const images = document.querySelectorAll('.carousel img');
-        
-        function changeImage() {
-            images[index].classList.remove('active');
-            index = (index + 1) % images.length;
-            images[index].classList.add('active');
-        }
-        
-        setInterval(changeImage, 3000);
-        
-        function showFullImage(src) {
-            document.getElementById('fullImage').src = src;
-            document.getElementById('fullImageContainer').style.display = 'flex';
-        }
-        
-        function closeFullImage() {
-            document.getElementById('fullImageContainer').style.display = 'none';
-        }
-        
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            document.querySelector(".hearts").appendChild(heart);
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = (Math.random() * 2 + 2) + "s";
-            setTimeout(() => heart.remove(), 4000);
-        }
-        setInterval(createHeart, 300);
-    </script>
 </body>
 </html>
